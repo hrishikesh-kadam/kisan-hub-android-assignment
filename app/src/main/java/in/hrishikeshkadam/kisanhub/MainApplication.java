@@ -10,6 +10,7 @@ import android.util.Log;
 public class MainApplication extends Application {
 
     private static final String LOG_TAG = MainApplication.class.getSimpleName();
+    public static final String CHANNEL_WEATHER_CSV_ID = "channelWeatherCsvId";
 
     @Override
     public void onCreate() {
