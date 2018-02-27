@@ -43,7 +43,7 @@ public class WeatherDataDownloader {
 
         if (response.body() != null)
             //noinspection ConstantConditions
-            LOGGER.log(Level.FINEST, "-> " + response.body().substring(0, response.body().indexOf("\n")));
+            LOGGER.log(Level.FINEST, "-> downloadByYear -> " + response.body().substring(0, response.body().indexOf("\n")));
 
         return response.body();
     }

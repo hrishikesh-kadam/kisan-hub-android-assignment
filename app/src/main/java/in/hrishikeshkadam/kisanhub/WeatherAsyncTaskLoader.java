@@ -9,8 +9,10 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-import in.hrishikeshkadam.weather_java_module.model.Region;
 import in.hrishikeshkadam.weather_java_module.WeatherDataDownloader;
+import in.hrishikeshkadam.weather_java_module.WeatherDataParser;
+import in.hrishikeshkadam.weather_java_module.model.Region;
+import in.hrishikeshkadam.weather_java_module.model.YearlyData;
 
 /**
  * Created by Hrishikesh Kadam on 26/02/2018
@@ -49,7 +51,11 @@ public class WeatherAsyncTaskLoader extends AsyncTaskLoader {
 
             for (String weatherParam : weatherParams) {
 
-                WeatherDataDownloader.downloadByYear(weatherParam, region.getRegionCode());
+                String downloadedBody =
+                        WeatherDataDownloader.downloadByYear(weatherParam, region.getRegionCode());
+
+                ArrayList<YearlyData> yearlyDataArrayList =
+                        WeatherDataParser.parseYearOrderedDownloadedBody(downloadedBody);
             }
         }
 
