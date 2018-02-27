@@ -1,11 +1,30 @@
 package in.hrishikeshkadam.weather_java_module.model;
 
+import java.util.LinkedHashMap;
+
 /**
  * Created by Hrishikesh Kadam on 26/02/2018
  */
 
 public class YearlyData {
 
+    public static final String JAN = "JAN";
+    public static final String FEB = "FEB";
+    public static final String MAR = "MAR";
+    public static final String APR = "APR";
+    public static final String MAY = "MAY";
+    public static final String JUN = "JUN";
+    public static final String JUL = "JUL";
+    public static final String AUG = "AUG";
+    public static final String SEP = "SEP";
+    public static final String OCT = "OCT";
+    public static final String NOV = "NOV";
+    public static final String DEC = "DEC";
+    public static final String WIN = "WIN";
+    public static final String SPR = "SPR";
+    public static final String SUM = "SUM";
+    public static final String AUT = "AUT";
+    public static final String ANN = "ANN";
     private int year;
     private String januaryValue;
     private String februaryValue;
@@ -121,6 +140,31 @@ public class YearlyData {
 
     public String getAnnualValue() {
         return annualValue;
+    }
+
+    public LinkedHashMap<String, String> getMapKeyValue() {
+
+        LinkedHashMap<String, String> map = new LinkedHashMap<>();
+
+        map.put(JAN, januaryValue);
+        map.put(FEB, februaryValue);
+        map.put(MAR, marchValue);
+        map.put(APR, aprilValue);
+        map.put(MAY, mayValue);
+        map.put(JUN, juneValue);
+        map.put(JUL, julyValue);
+        map.put(AUG, augustValue);
+        map.put(SEP, septemberValue);
+        map.put(OCT, octoberValue);
+        map.put(NOV, novemberValue);
+        map.put(DEC, decemberValue);
+        map.put(WIN, winterValue);
+        map.put(SPR, springValue);
+        map.put(SUM, summerValue);
+        map.put(AUT, autumnValue);
+        map.put(ANN, annualValue);
+
+        return map;
     }
 
     @Override

@@ -19,6 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".data.WeatherContentProvider"
+            android:authorities="in.hrishikeshkadam.kisanhub"
+            android:exported="false" />
+
     </application>
 
 </manifest>

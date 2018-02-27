@@ -25,6 +25,9 @@ public class WeatherDataParser {
 
     public static ArrayList<YearlyData> parseYearOrderedDownloadedBody(String downloadedBody) {
 
+        if (downloadedBody == null || downloadedBody.length() == 0)
+            return null;
+
         ArrayList<YearlyData> yearlyDataArrayList = new ArrayList<>();
 
         String[] downloadedBodyArray = downloadedBody.split("\r\n");
