@@ -26,6 +26,7 @@
             android:authorities="in.hrishikeshkadam.kisanhub"
             android:exported="false" />
 
+        <activity android:name=".DetailsActivity"></activity>
     </application>
 
 </manifest>

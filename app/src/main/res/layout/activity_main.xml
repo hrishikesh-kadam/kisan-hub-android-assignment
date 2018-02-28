@@ -2,17 +2,109 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="in.hrishikeshkadam.kisanhub.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/keyline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/keyline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <TextView
+                android:id="@+id/textViewHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/main_activity_header"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="@id/keyline2"
+                app:layout_constraintStart_toStartOf="@id/keyline1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxSelectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/select_deselect_all"
+                app:layout_constraintStart_toStartOf="@id/keyline1"
+                app:layout_constraintTop_toBottomOf="@id/textViewHeader" />
+
+            <include
+                android:id="@+id/ukWeatherParamsLayout"
+                layout="@layout/region_weather_param_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/keyline1"
+                app:layout_constraintTop_toBottomOf="@id/checkboxSelectAll" />
+
+            <include
+                android:id="@+id/englandWeatherParamsLayout"
+                layout="@layout/region_weather_param_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/keyline1"
+                app:layout_constraintTop_toBottomOf="@id/ukWeatherParamsLayout" />
+
+            <include
+                android:id="@+id/walesWeatherParamsLayout"
+                layout="@layout/region_weather_param_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/keyline1"
+                app:layout_constraintTop_toBottomOf="@id/englandWeatherParamsLayout" />
+
+            <include
+                android:id="@+id/scotlandWeatherParamsLayout"
+                layout="@layout/region_weather_param_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/keyline1"
+                app:layout_constraintTop_toBottomOf="@id/walesWeatherParamsLayout" />
+
+            <Button
+                android:id="@+id/buttonDownloadFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/button_download_format"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/keyline2"
+                app:layout_constraintStart_toStartOf="@id/keyline1"
+                app:layout_constraintTop_toBottomOf="@id/scotlandWeatherParamsLayout" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/loading_mask_layout" />
 
 </android.support.constraint.ConstraintLayout>

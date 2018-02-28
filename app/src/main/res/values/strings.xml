@@ -3,4 +3,23 @@
 
     <string name="channel_weather_csv_name">Weather.csv Channel</string>
     <string name="channel_weather_csv_description">This channel let\'s you notify when weather.csv is formatted</string>
+
+    <string name="main_activity_header">Select region and weather parameters to download and format the data</string>
+
+    <string name="uk">UK</string>
+    <string name="england">England</string>
+    <string name="wales">Wales</string>
+    <string name="scotland">Scotland</string>
+
+    <string name="max_temp">Max Temp</string>
+    <string name="min_temp">Min Temp</string>
+    <string name="mean_temp">Mean Temp</string>
+    <string name="sunshine">Sunshine</string>
+    <string name="rainfall">Rainfall</string>
+
+    <string name="button_download_format">Download and Format</string>
+    <string name="select_deselect_all">Select / Deselect All</string>
+
+    <string name="empty_view_text">Something wen\'t unexpected</string>
+    <string name="details_header">region_code, weather_param, year, key, value</string>
 </resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/region_weather_param_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/keyline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxRegion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="UK/England/Wales/Scotland" />
+
+    <CheckBox
+        android:id="@+id/checkboxMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/max_temp"
+        app:layout_constraintStart_toStartOf="@id/keyline1"
+        app:layout_constraintTop_toBottomOf="@id/checkboxRegion" />
+
+    <CheckBox
+        android:id="@+id/checkboxMinTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/min_temp"
+        app:layout_constraintStart_toStartOf="@id/keyline1"
+        app:layout_constraintTop_toBottomOf="@id/checkboxMaxTemp" />
+
+    <CheckBox
+        android:id="@+id/checkboxMeanTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/mean_temp"
+        app:layout_constraintStart_toStartOf="@id/keyline1"
+        app:layout_constraintTop_toBottomOf="@id/checkboxMinTemp" />
+
+    <CheckBox
+        android:id="@+id/checkboxSunshine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sunshine"
+        app:layout_constraintStart_toStartOf="@id/keyline1"
+        app:layout_constraintTop_toBottomOf="@id/checkboxMeanTemp" />
+
+    <CheckBox
+        android:id="@+id/checkboxRainfall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/rainfall"
+        app:layout_constraintStart_toStartOf="@id/keyline1"
+        app:layout_constraintTop_toBottomOf="@id/checkboxSunshine" />
+
+</android.support.constraint.ConstraintLayout>

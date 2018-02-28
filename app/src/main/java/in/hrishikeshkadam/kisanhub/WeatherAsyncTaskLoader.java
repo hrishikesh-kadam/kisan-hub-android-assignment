@@ -66,7 +66,7 @@ public class WeatherAsyncTaskLoader extends AsyncTaskLoader {
 
         int noOfRowsDeleted =
                 getContext().getContentResolver().delete(WeatherEntry.CONTENT_URI, null, null);
-        Log.d(LOG_TAG, "-> loadInBackground -> noOfRowsDeleted = " + noOfRowsDeleted);
+        Log.v(LOG_TAG, "-> loadInBackground -> noOfRowsDeleted = " + noOfRowsDeleted);
 
         WeatherDataToFile.initCSV(new File(
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),

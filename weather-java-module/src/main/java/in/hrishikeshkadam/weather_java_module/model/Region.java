@@ -28,4 +28,12 @@ public class Region implements Serializable {
     public void setWeatherParams(ArrayList<String> weatherParams) {
         this.weatherParams = weatherParams;
     }
+
+    @Override
+    public String toString() {
+        return "Region{" +
+                "regionCode='" + regionCode + '\'' +
+                ", weatherParams=" + weatherParams +
+                '}';
+    }
 }
