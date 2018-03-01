@@ -40,5 +40,5 @@ statistics section]
 
 ## Screenshots
 
-<img src="https://github.com/hrishikesh-kadam/kisan-hub-android-assignment/raw/master/screenshots/Screenshot_20180301-064219.jpg" width="240" height="426">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://github.com/hrishikesh-kadam/kisan-hub-android-assignment/raw/master/screenshots/Screenshot_20180301-064233.jpg" width="240" height="426"><br/><br/><br/>
+<img src="https://github.com/hrishikesh-kadam/kisan-hub-android-assignment/raw/master/screenshots/Screenshot_20180301-070346.jpg" width="240" height="426">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/hrishikesh-kadam/kisan-hub-android-assignment/raw/master/screenshots/Screenshot_20180301-070402.jpg" width="240" height="426"><br/><br/><br/>
