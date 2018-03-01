@@ -41,6 +41,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/main_activity_header"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000"
                 app:layout_constraintEnd_toEndOf="@id/keyline2"
                 app:layout_constraintStart_toStartOf="@id/keyline1"
                 app:layout_constraintTop_toTopOf="parent" />

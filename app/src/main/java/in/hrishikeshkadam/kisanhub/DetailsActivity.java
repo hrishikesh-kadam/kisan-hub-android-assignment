@@ -2,6 +2,8 @@ package in.hrishikeshkadam.kisanhub;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -20,6 +22,8 @@ public class DetailsActivity extends AppCompatActivity implements LoaderManager.
     public static final int VIEW_WEATHER_CSV_LOADER_ID = 101;
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
+    @BindView(R.id.rootView)
+    ConstraintLayout rootView;
 
     DetailsAdapter detailsAdapter;
 
@@ -27,7 +31,6 @@ public class DetailsActivity extends AppCompatActivity implements LoaderManager.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.v(LOG_TAG, "-> onCreate");
-
 
         setContentView(R.layout.activity_details);
         ButterKnife.bind(this);
@@ -37,6 +40,8 @@ public class DetailsActivity extends AppCompatActivity implements LoaderManager.
         recyclerView.setAdapter(detailsAdapter);
 
         getSupportLoaderManager().initLoader(VIEW_WEATHER_CSV_LOADER_ID, null, this);
+
+        Snackbar.make(rootView, R.string.details_snackbar_message, Snackbar.LENGTH_LONG).show();
     }
 
     public String getLoaderString(int id) {

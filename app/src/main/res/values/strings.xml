@@ -22,4 +22,6 @@
 
     <string name="empty_view_text">Something wen\'t unexpected</string>
     <string name="details_header">region_code, weather_param, year, key, value</string>
+
+    <string name="details_snackbar_message">Data stored in Download/weather.csv</string>
 </resources>

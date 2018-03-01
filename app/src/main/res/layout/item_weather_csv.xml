@@ -1,32 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
     android:layout_width="match_parent"
-    android:layout_marginBottom="16dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="4dp">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_margin="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="England, Max temp, 1910, JAN, 5.4" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintEnd_toEndOf="@id/cardView"
-            app:layout_constraintStart_toStartOf="@id/cardView"
-            app:layout_constraintTop_toTopOf="@id/cardView"
-            tools:text="England, Max temp, 1910, JAN, 5.4" />
-
-    </android.support.v7.widget.CardView>
-
-</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

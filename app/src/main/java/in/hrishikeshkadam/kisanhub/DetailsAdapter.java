@@ -2,7 +2,6 @@ package in.hrishikeshkadam.kisanhub;
 
 import android.database.Cursor;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,9 +28,6 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.ViewHold
     }
 
     public void swapCursor(Cursor cursor) {
-
-        if (cursor != null)
-            Log.d(LOG_TAG, "-> swapCursor -> " + cursor.getCount());
 
         this.cursor = cursor;
         notifyDataSetChanged();
@@ -94,6 +90,7 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.ViewHold
                         cursor.getString(cursor.getColumnIndex(WeatherEntry.COLUMN_KEY));
                 String value =
                         cursor.getString(cursor.getColumnIndex(WeatherEntry.COLUMN_VALUE));
+                value = value == null || value.equals("---") ? "NA" : value;
 
                 NormalViewHolder normalViewHolder = (NormalViewHolder) holder;
                 normalViewHolder.textView.setText(String.format("%s, %s, %s, %s, %s",
