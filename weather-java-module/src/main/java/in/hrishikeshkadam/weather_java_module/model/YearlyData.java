@@ -44,102 +44,151 @@ public class YearlyData {
     private String autumnValue;
     private String annualValue;
 
-    public YearlyData(String[] str) {
-
-        try {
-            year = Integer.parseInt(str[0]);
-            januaryValue = str[1];
-            februaryValue = str[2];
-            marchValue = str[3];
-            aprilValue = str[4];
-            mayValue = str[5];
-            juneValue = str[6];
-            julyValue = str[7];
-            augustValue = str[8];
-            septemberValue = str[9];
-            octoberValue = str[10];
-            novemberValue = str[11];
-            decemberValue = str[12];
-            winterValue = str[13];
-            springValue = str[14];
-            summerValue = str[15];
-            autumnValue = str[16];
-            annualValue = str[17];
-        } catch (ArrayIndexOutOfBoundsException e) {
-        }
-
+    public YearlyData() {
     }
 
     public int getYear() {
         return year;
     }
 
+    public void setYear(int year) {
+        this.year = year;
+    }
+
     public String getJanuaryValue() {
         return januaryValue;
+    }
+
+    public void setJanuaryValue(String januaryValue) {
+        this.januaryValue = januaryValue;
     }
 
     public String getFebruaryValue() {
         return februaryValue;
     }
 
+    public void setFebruaryValue(String februaryValue) {
+        this.februaryValue = februaryValue;
+    }
+
     public String getMarchValue() {
         return marchValue;
+    }
+
+    public void setMarchValue(String marchValue) {
+        this.marchValue = marchValue;
     }
 
     public String getAprilValue() {
         return aprilValue;
     }
 
+    public void setAprilValue(String aprilValue) {
+        this.aprilValue = aprilValue;
+    }
+
     public String getMayValue() {
         return mayValue;
+    }
+
+    public void setMayValue(String mayValue) {
+        this.mayValue = mayValue;
     }
 
     public String getJuneValue() {
         return juneValue;
     }
 
+    public void setJuneValue(String juneValue) {
+        this.juneValue = juneValue;
+    }
+
     public String getJulyValue() {
         return julyValue;
+    }
+
+    public void setJulyValue(String julyValue) {
+        this.julyValue = julyValue;
     }
 
     public String getAugustValue() {
         return augustValue;
     }
 
+    public void setAugustValue(String augustValue) {
+        this.augustValue = augustValue;
+    }
+
     public String getSeptemberValue() {
         return septemberValue;
+    }
+
+    public void setSeptemberValue(String septemberValue) {
+        this.septemberValue = septemberValue;
     }
 
     public String getOctoberValue() {
         return octoberValue;
     }
 
+    public void setOctoberValue(String octoberValue) {
+        this.octoberValue = octoberValue;
+    }
+
     public String getNovemberValue() {
         return novemberValue;
+    }
+
+    public void setNovemberValue(String novemberValue) {
+        this.novemberValue = novemberValue;
     }
 
     public String getDecemberValue() {
         return decemberValue;
     }
 
+    public void setDecemberValue(String decemberValue) {
+        this.decemberValue = decemberValue;
+    }
+
     public String getWinterValue() {
         return winterValue;
+    }
+
+    public void setWinterValue(String winterValue) {
+        this.winterValue = winterValue;
     }
 
     public String getSpringValue() {
         return springValue;
     }
 
+    public void setSpringValue(String springValue) {
+        this.springValue = springValue;
+    }
+
     public String getSummerValue() {
         return summerValue;
+    }
+
+    public void setSummerValue(String summerValue) {
+        this.summerValue = summerValue;
     }
 
     public String getAutumnValue() {
         return autumnValue;
     }
 
+    public void setAutumnValue(String autumnValue) {
+        this.autumnValue = autumnValue;
+    }
+
     public String getAnnualValue() {
         return annualValue;
+    }
+
+    public void setAnnualValue(String annualValue) {
+        this.annualValue = annualValue;
     }
 
     public LinkedHashMap<String, String> getMapKeyValue() {
