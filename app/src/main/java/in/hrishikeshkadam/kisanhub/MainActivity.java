@@ -1,7 +1,9 @@
 package in.hrishikeshkadam.kisanhub;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -50,9 +52,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         initCheckBoxesWeatherParams();
 
-        /*if (Build.VERSION.SDK_INT >= 23)
+        if (Build.VERSION.SDK_INT >= 23)
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    WRITE_EXTERNAL_STORAGE_REQUEST_CODE);*/
+                    WRITE_EXTERNAL_STORAGE_REQUEST_CODE);
     }
 
     private void initCheckBoxesWeatherParams() {
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             case WRITE_EXTERNAL_STORAGE_REQUEST_CODE:
 
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Log.d(LOG_TAG, "-> onRequestPermissionsResult -> WRITE_EXTERNAL_STORAGE PERMISSION_GRANTED");
+                    Log.v(LOG_TAG, "-> onRequestPermissionsResult -> WRITE_EXTERNAL_STORAGE PERMISSION_GRANTED");
                 } else {
                     Log.e(LOG_TAG, "-> onRequestPermissionsResult -> WRITE_EXTERNAL_STORAGE PERMISSION_DENIED");
                 }

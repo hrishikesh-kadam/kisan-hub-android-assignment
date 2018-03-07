@@ -41,6 +41,7 @@ public class WeatherAsyncTaskLoader extends AsyncTaskLoader {
 
     public static final String LOG_TAG = WeatherAsyncTaskLoader.class.getSimpleName();
     private ArrayList<Region> regionArrayList;
+    private boolean cachedResult;
 
     public WeatherAsyncTaskLoader(@NonNull Context context, Bundle bundle) {
         super(context);
@@ -56,7 +57,8 @@ public class WeatherAsyncTaskLoader extends AsyncTaskLoader {
         super.onStartLoading();
         Log.v(LOG_TAG, "-> onStartLoading");
 
-        forceLoad();
+        if (!cachedResult)
+            forceLoad();
     }
 
     @Nullable
@@ -95,7 +97,8 @@ public class WeatherAsyncTaskLoader extends AsyncTaskLoader {
 
         //notifyFormattingComplete();
 
-        return null;
+        cachedResult = true;
+        return cachedResult;
     }
 
     private void notifyFormattingComplete() {
