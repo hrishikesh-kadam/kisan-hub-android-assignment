@@ -34,9 +34,9 @@ statistics section]
 - Please find formatted file in Download/weather.csv
 - I found interesting facts by quering db through Android Instrumented Tests and they are as follows -
 
-  1. Hottest month of UK from Jan 1910 to Jan 2018 was Jul 2006 (23.2 °C)
-  2. Coldest month of UK from Jan 1910 to Jan 2018 was Jan 1963 (-4.4 °C)
-  3. Highest month Rainfall UK received from Jan 1910 to Jan 2018 was Dec 2015 (218.8 mm)
+  1. Hottest month of UK from Jan 1910 to Feb 2018 was Jul 2006 (23.2 °C)
+  2. Coldest month of UK from Jan 1910 to Feb 2018 was Jan 1963 (-4.4 °C)
+  3. Highest month Rainfall UK received from Jan 1910 to Feb 2018 was Dec 2015 (218.8 mm)
 
 ## Screenshots
 
